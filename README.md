@@ -20,7 +20,7 @@ This repository contains my hands-on practice and experiments with Java Collecti
 ## 🛠️ How to Run the Code
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/java-data-structures-practice.git
+   git clone https://github.com/shreetanu/JavaCollectionsPlayground.git
    ```
 2. Open the project in **IntelliJ IDEA**.
 3. Ensure the correct **JDK version** is set up.
