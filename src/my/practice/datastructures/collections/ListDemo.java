@@ -1,4 +1,4 @@
-package my.practice.datastructures;
+package my.practice.datastructures.collections;
 
 import java.util.Arrays;
 import java.util.Collections;
