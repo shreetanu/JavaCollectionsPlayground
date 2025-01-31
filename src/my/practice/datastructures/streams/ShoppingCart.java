@@ -62,7 +62,12 @@ public class ShoppingCart {
             System.out.println("VALUE"+entry.getValue());
         }
 
-       Map<String,Map<String,List<Item>>> newMap = l1.stream().collect(Collectors.groupingBy(Item::getItemName,Collectors.groupingBy(
+        /**
+         * Example: Grouping by Multiple Properties (Nested Grouping)
+         * You can chain multiple groupingBy collectors to perform hierarchical grouping. For example, group items first by category and then by price range.
+         */
+
+        Map<String,Map<String,List<Item>>> newMap = l1.stream().collect(Collectors.groupingBy(Item::getItemName,Collectors.groupingBy(
                 item -> {
             if(item.getItemPrice() <= 50.0) return "LOW";
             else return "HIGH";
@@ -78,6 +83,10 @@ public class ShoppingCart {
            }
         }
 
+        /**
+         * Grouping and Aggregating with Other Operations
+         * summingInt, summingDouble, summingLong
+         */
         Map<String,Double> mp3 = l1.stream().collect(Collectors.groupingBy(Item::getItemName,Collectors.summingDouble(Item::getItemPrice)));
 
         for(Map.Entry<String,Double> entry: mp3.entrySet()) {
