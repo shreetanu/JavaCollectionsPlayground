@@ -51,6 +51,17 @@ public class PriorityQueueDemo {
         //Output is JAY
         System.out.println("ATPEEK AGAIN"+pqPerson.peek().name);
 
+        /** FOR MULTIPLE COMPARINGS
+         * use .thenComparing
+         */
+        PriorityQueue<Person> pqPersonByAgeAndName = new PriorityQueue<>(Comparator.comparingInt((Person person) -> person.age).thenComparing(p -> p.name));
+        pqPersonByAgeAndName.offer(new Person("Arya",23));
+        pqPersonByAgeAndName.offer(new Person("Jay",22));
+        pqPersonByAgeAndName.offer(new Person("Vaid",23));
+
+        System.out.println("ATPEEK AGAIN"+pqPersonByAgeAndName.peek().name);
+
+
 
     }
 }
