@@ -16,6 +16,10 @@ class Person {
     }
 }
 
+/**
+ * Priority Queue - not thread safe
+ * null elements are not allowed
+ */
 public class PriorityQueueDemo {
     public static void main(String[] args) {
         /**
@@ -44,6 +48,7 @@ public class PriorityQueueDemo {
 
         PriorityQueue<Person> pqPerson = new PriorityQueue<>(Comparator.comparing(p1 -> p1.name));
 
+        //Time Complexity - O(logn)
         pqPerson.offer(new Person("Tanushree",24));
         pqPerson.offer(new Person("Jay",22));
         pqPerson.offer(new Person("Vaid",23));
@@ -59,9 +64,7 @@ public class PriorityQueueDemo {
         pqPersonByAgeAndName.offer(new Person("Jay",22));
         pqPersonByAgeAndName.offer(new Person("Vaid",23));
 
+        //Time complexity peek - O(1)
         System.out.println("ATPEEK AGAIN"+pqPersonByAgeAndName.peek().name);
-
-
-
     }
 }
